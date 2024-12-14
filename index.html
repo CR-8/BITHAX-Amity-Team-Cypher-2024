@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-bg">
+            <img src="https://media.istockphoto.com/id/533462679/photo/london-big-ben-and-houses-of-parliament-uk.webp?s=2048x2048&w=is&k=20&c=0_NMoz4lt5U711C8mCoGPg6DV8WOsTytITMkiB0A7Y4=" alt="City Background">
+        </div>
+        <div class="header-content">
+            <div class="location-info">
+                <h1><i class="fas fa-map-marker-alt"></i> London</h1>
+                <p class="temperature">16°C</p>
+                <p class="condition">Overcast</p>
+                <p class="greeting">Good afternoon!</p>
+            </div>
+            <div class="time-info">
+                <h2>13:41 PM</h2>
+                <p>December 14, 2024</p>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <button class="nav-button active">Dashboard</button>
+            <button class="nav-button">News</button>
+            <button class="nav-button">Weather</button>
+            <button class="nav-button">Events</button>
+            <button class="nav-button">Services</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <div class="content-grid">
+            <section class="news-section">
+                <div class="news-carousel">
+                    <div class="featured-news">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Featured News">
+                        <div class="news-overlay">
+                            <span class="featured-tag">Featured</span>
+                            <h2>City Announces Major Infrastructure Development Plan</h2>
+                            <p class="news-date">December 14, 2024</p>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <article class="news-item">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="News 1">
+                            <div class="news-content">
+                                <h3>New Public Transportation Routes Announced</h3>
+                                <p>Improved connectivity across all boroughs starting next month</p>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="News 2">
+                            <div class="news-content">
+                                <h3>Central Park Winter Festival Begins</h3>
+                                <p>Annual winter celebration features new attractions this year</p>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="News 3">
+                            <div class="news-content">
+                                <h3>Community Clean-up Initiative Launch</h3>
+                                <p>Residents join forces for environmental sustainability</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="dashboard-container">
+        <!-- Weather Detailed Widget -->
+        <div class="widget weather-detailed">
+            <div class="weather-bg">
+                <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Weather Background">
+            </div>
+            <div class="weather-content">
+                <h3><i class="fas fa-cloud-sun"></i> Weather Insights</h3>
+                <div class="current-conditions">
+                    <div class="temp-display">
+                        <span class="current-temp">16°C</span>
+                        <span class="feels-like">Feels like 14°C</span>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span class="stat-value">80%</span>
+                            <span class="stat-label">Humidity</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span class="stat-value">15 mph</span>
+                            <span class="stat-label">Wind</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <span class="stat-value">3.2</span>
+                            <span class="stat-label">UV Index</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Air Quality Monitor Widget -->
+        <div class="widget air-quality-detailed">
+            <div class="widget-image">
+                <img src="https://images.unsplash.com/photo-1532178333607-9d704f0a3282?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Air Quality">
+            </div>
+            <h3><i class="fas fa-wind"></i> Air Quality Monitor</h3>
+            <div class="aqi-main">
+                <div class="aqi-score">
+                    <span class="stat-value">60</span>
+                    <span class="stat-label">AQI - Moderate</span>
+                </div>
+                <div class="aqi-visual">
+                    <div class="aqi-level" style="width: 60%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Traffic Widget -->
+        <div class="widget traffic-smart">
+            <h3><i class="fas fa-traffic-light"></i> Traffic Overview</h3>
+            <div class="traffic-stats">
+                <div class="detail-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span class="stat-value">20 mph</span>
+                    <span class="stat-label">Average Speed</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="stat-value">+10 min</span>
+                    <span class="stat-label">Delay Time</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transit Hub Widget -->
+        <div class="widget transport-hub">
+            <div class="widget-image">
+                <img src="https://images.unsplash.com/photo-1520105072000-f44fc083e508?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="London Underground">
+            </div>
+            <h3><i class="fas fa-subway"></i> TfL Updates</h3>
+            <div class="transit-modes">
+                <div class="mode-tab active">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/subway.png" alt="Underground" class="transit-mode-icon">
+                    Underground
+                </div>
+                <div class="mode-tab">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/bus.png" alt="Bus" class="transit-mode-icon">
+                    Bus
+                </div>
+                <div class="mode-tab">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/train.png" alt="Rail" class="transit-mode-icon">
+                    Rail
+                </div>
+            </div>
+            <div class="route-map-preview">
+                <img src="https://images.unsplash.com/photo-1570275239925-4af0aa537617?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="London Tube Map">
+            </div>
+            <div class="transit-updates">
+                <div class="update-item">
+                    <span class="line-number">V</span>
+                    <div class="route-info">
+                        <div class="route-name">Victoria Line</div>
+                        <div class="route-status">Good Service</div>
+                    </div>
+                    <span class="arrival-time">2 min</span>
+                </div>
+                <div class="update-item">
+                    <span class="line-number">P</span>
+                    <div class="route-info">
+                        <div class="route-name">Piccadilly Line</div>
+                        <div class="route-status">Minor Delays</div>
+                    </div>
+                    <span class="arrival-time">4 min</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- City Services Monitor Widget -->
+        <div class="widget city-services">
+            <h3><i class="fas fa-city"></i> City Services Monitor</h3>
+            <div class="service-category">
+                <h4>Emergency Services</h4>
+                <div class="service-item">
+                    <i class="fas fa-ambulance"></i>
+                    <span>Ambulance Response</span>
+                    <span>8.2 min avg</span>
+                    <span class="status operational">Operational</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-fire-extinguisher"></i>
+                    <span>Fire Department</span>
+                    <span>6.5 min avg</span>
+                    <span class="status operational">Operational</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Environmental Health Widget -->
+        <div class="widget environmental">
+            <h3><i class="fas fa-leaf"></i> Environmental Health</h3>
+            <div class="eco-stats">
+                <div class="stat-card">
+                    <span class="stat-value">27%</span>
+                    <small>Green Cover</small>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">1.2MW</span>
+                    <small>Solar Power</small>
+                </div>
+            </div>
+            <div class="initiatives">
+                <div class="initiative-item">
+                    <span>Tree Planting Initiative</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="initiative-item">
+                    <span>Recycling Program</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Parking Widget -->
+        <div class="widget smart-parking">
+            <h3><i class="fas fa-parking"></i> Smart Parking</h3>
+            <div class="parking-overview">
+                <div class="total-spots">
+                    <span class="number">1,247</span>
+                    <small>Available Spots</small>
+                </div>
+                <div class="availability-chart">
+                    <div class="chart-segment available" style="width: 60%;">60%</div>
+                    <div class="chart-segment occupied" style="width: 40%;">40%</div>
+                </div>
+            </div>
+            <div class="garage-list">
+                <div class="garage-item">
+                    <span>Central Garage</span>
+                    <span>125/200</span>
+                    <span>$12/hr</span>
+                </div>
+                <div class="garage-item">
+                    <span>West Side Parking</span>
+                    <span>89/150</span>
+                    <span>$8/hr</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Public Safety Analytics Widget -->
+        <div class="widget safety-analytics">
+            <h3><i class="fas fa-shield-alt"></i> Public Safety Analytics</h3>
+            <div class="alert-status">
+                <div class="status-indicator normal"></div>
+                <span>Normal Alert Level</span>
+            </div>
+            <div class="incident-summary">
+                <div class="incident-stat">
+                    <span class="number">12</span>
+                    <small>Active Patrols</small>
+                </div>
+                <div class="incident-stat">
+                    <span class="number">3</span>
+                    <small>Recent Reports</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cultural Events Calendar Widget -->
+        <div class="widget cultural-events">
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="https://images.unsplash.com/photo-1569617084133-26942bb441f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Royal Albert Hall Concert">
+                    <div class="event-details">
+                        <span class="event-date">Dec 14, 2024</span>
+                        <h4>Christmas at Royal Albert Hall</h4>
+                        <p>Royal Albert Hall, Kensington</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- City Map Widget -->
+        <div class="widget city-map">
+            <h3><i class="fas fa-map-marked-alt"></i> City Overview</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56953.61125320599!2d81.01905087036131!3d26.852649639316887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1734164218578!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Healthcare Services Widget -->
+        <div class="widget healthcare">
+            <h3><i class="fas fa-hospital"></i> NHS Services</h3>
+            <div class="hospital-card">
+                <div class="hospital-image">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="St. Thomas' Hospital">
+                </div>
+                <div class="hospital-info">
+                    <h4>St. Thomas' Hospital</h4>
+                    <div class="wait-time">
+                        <span class="stat-value">35</span>
+                        <span class="stat-label">min wait</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Environmental Widget -->
+        <div class="widget environmental">
+            <h3><i class="fas fa-leaf"></i> Environmental Health</h3>
+            <div class="eco-stat-card">
+                <div class="eco-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="eco-info">
+                    <span class="stat-value">27%</span>
+                    <span class="stat-label">Green Cover</span>
+                </div>
+            </div>
+            <div class="eco-stat-card">
+                <div class="eco-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="eco-info">
+                    <span class="stat-value">1.2MW</span>
+                    <span class="stat-label">Solar Power</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather Widget with Forecast -->
+        <div class="widget weather-detailed">
+            <div class="weather-bg">
+                <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="London Weather">
+            </div>
+            <div class="weather-content">
+                <h3><i class="fas fa-cloud-sun"></i> London Weather</h3>
+                <div class="current-conditions">
+                    <div class="temp-display">
+                        <span class="current-temp">16°C</span>
+                        <span class="feels-like">Feels like 14°C</span>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span class="stat-value">80%</span>
+                            <span class="stat-label">Humidity</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span class="stat-value">15 mph</span>
+                            <span class="stat-label">Wind</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <span class="stat-value">3.2</span>
+                            <span class="stat-label">UV Index</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-forecast">
+                    <div class="forecast-item">
+                        <div class="day">Today</div>
+                        <i class="fas fa-cloud-rain"></i>
+                        <div class="forecast-temp">16°C</div>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="day">Sun</div>
+                        <i class="fas fa-cloud"></i>
+                        <div class="forecast-temp">15°C</div>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="day">Mon</div>
+                        <i class="fas fa-cloud-sun"></i>
+                        <div class="forecast-temp">14°C</div>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="day">Tue</div>
+                        <i class="fas fa-cloud"></i>
+                        <div class="forecast-temp">13°C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- London Landmarks Widget -->
+        <div class="widget landmarks-widget">
+            <h3><i class="fas fa-landmark"></i> London Landmarks</h3>
+            <div class="landmark-card">
+                <div class="landmark-image">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="London Eye">
+                    <div class="landmark-info">
+                        <span class="landmark-status">Open Now</span>
+                        <h4>London Eye</h4>
+                        <p>Wait Time: 30 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="landmark-card">
+                <div class="landmark-image">
+                    <img src="https://images.unsplash.com/photo-1520967824495-b529aeba26df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tower Bridge">
+                    <div class="landmark-info">
+                        <span class="landmark-status">Bridge Schedule</span>
+                        <h4>Tower Bridge</h4>
+                        <p>Next lift: 15:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced TfL Updates -->
+        <div class="widget transport-hub">
+            <h3><i class="fas fa-subway"></i> TfL Live Updates</h3>
+            <div class="tube-lines">
+                <div class="tube-line">
+                    <div class="line-indicator victoria-line">V</div>
+                    <div class="line-info">
+                        <div class="line-name">Victoria Line</div>
+                        <div class="line-status">Good Service</div>
+                    </div>
+                </div>
+                <div class="tube-line">
+                    <div class="line-indicator piccadilly-line">P</div>
+                    <div class="line-info">
+                        <div class="line-name">Piccadilly Line</div>
+                        <div class="line-status">Minor Delays</div>
+                    </div>
+                </div>
+                <div class="tube-line">
+                    <div class="line-indicator central-line">C</div>
+                    <div class="line-info">
+                        <div class="line-name">Central Line</div>
+                        <div class="line-status">Good Service</div>
+                    </div>
+                </div>
+                <div class="tube-line">
+                    <div class="line-indicator jubilee-line">J</div>
+                    <div class="line-info">
+                        <div class="line-name">Jubilee Line</div>
+                        <div class="line-status">Good Service</div>
+                    </div>
+                </div>
+            </div>
+            <div class="transit-modes">
+                <div class="mode-tab active">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/subway.png" alt="Underground" class="transit-mode-icon">
+                    Underground
+                </div>
+                <div class="mode-tab">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/bus.png" alt="Bus" class="transit-mode-icon">
+                    Bus
+                </div>
+                <div class="mode-tab">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/train.png" alt="Rail" class="transit-mode-icon">
+                    Rail
+                </div>
+            </div>
+            <div class="route-map-preview">
+                <img src="https://images.unsplash.com/photo-1570275239925-4af0aa537617?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="London Tube Map">
+            </div>
+        </div>
+
+        <!-- Enhanced NHS Services -->
+        <div class="widget healthcare">
+            <h3><i class="fas fa-hospital"></i> NHS Services</h3>
+            <div class="hospital-card">
+                <div class="hospital-image">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="St. Thomas' Hospital">
+                </div>
+                <div class="hospital-info">
+                    <h4>St. Thomas' Hospital</h4>
+                    <div class="wait-time-indicator">
+                        <span class="wait-time">35 min wait</span>
+                        <div class="time-bar">
+                            <div class="time-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nhs-urgent-care">
+                <h4><i class="fas fa-first-aid"></i> Nearest Urgent Care</h4>
+                <p>Guy's Hospital Walk-in Centre</p>
+                <small>1.2 miles away • Open until 20:00</small>
+            </div>
+        </div>
+
+        <!-- River Thames Status -->
+        <div class="widget thames-widget">
+            <h3><i class="fas fa-water"></i> River Thames Status</h3>
+            <div class="thames-status">
+                <div class="tide-info">
+                    <h4>Current Tide</h4>
+                    <p>Rising • High tide at 16:45</p>
+                    <small>Safe for river traffic</small>
+                </div>
+                <div class="tide-level">
+                    <div class="tide-current" style="height: 65%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Air Quality Widget -->
+        <div class="widget air-quality-detailed">
+            <div class="widget-image">
+                <img src="https://images.unsplash.com/photo-1532178333607-9d704f0a3282?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Air Quality">
+            </div>
+            <h3><i class="fas fa-wind"></i> Air Quality Monitor</h3>
+            <div class="aqi-main">
+                <div class="aqi-score">
+                    <span class="stat-value">60</span>
+                    <span class="stat-label">AQI - Moderate</span>
+                </div>
+                <div class="aqi-visual">
+                    <div class="aqi-level" style="width: 60%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cultural Events -->
+        <div class="widget cultural-events">
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="https://images.unsplash.com/photo-1569617084133-26942bb441f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Royal Albert Hall Concert">
+                    <div class="event-details">
+                        <span class="event-date">Dec 14, 2024</span>
+                        <h4>Christmas at Royal Albert Hall</h4>
+                        <p>Royal Albert Hall, Kensington</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="city-dashboard-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="City Dashboard Logo">
+                <h3>City Dashboard</h3>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">City Guide</a></li>
+                        <li><a href="#">Emergency</a></li>
+                        <li><a href="#">Transportation</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 City Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,2150 @@
+/* Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+/* Color Scheme */
+.dashboard-container {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.widget {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .widget {
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Button and Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Widget Specific Styles */
+.weather-detailed .temp-display {
+    font-size: 2rem;
+    color: #e67e22;
+}
+
+.landmarks-widget .landmark-info h4 {
+    color: #16a085;
+}
+
+.transport-hub .line-indicator {
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.traffic-smart .stat-value {
+    color: #c0392b;
+}
+
+/* Footer Styles */
+.city-dashboard-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+}
+
+.footer-links a:hover {
+    color: #bdc3c7;
+}
+
+:root {
+    /* Primary Colors */
+    --primary-blue: #2563eb;
+    --primary-purple: #7c3aed;
+    --primary-green: #059669;
+    --primary-orange: #ea580c;
+    --primary-red: #dc2626;
+    
+    /* Background Colors */
+    --bg-dark: #1e293b;
+    --bg-darker: #0f172a;
+    --bg-card: #334155;
+    --bg-card-hover: #475569;
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    
+    /* Accent Colors */
+    --accent-yellow: #fbbf24;
+    --accent-cyan: #06b6d4;
+    --accent-pink: #ec4899;
+    
+    /* Gradients */
+    --gradient-blue: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    --gradient-purple: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+    --gradient-green: linear-gradient(135deg, #047857 0%, #10b981 100%);
+    --gradient-orange: linear-gradient(135deg, #c2410c 0%, #fb923c 100%);
+    
+    /* UI Elements */
+    --border-radius: 16px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --border-light: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.widget {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    border: var(--border-light);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+
+.widget:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.widget h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.widget h3 i {
+    color: var(--accent-yellow);
+    font-size: 1.2rem;
+}
+
+.stat-value, .number {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.stat-label, small {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.update-item, .news-item, .event-item {
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.detail-item i {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    color: var(--accent-yellow);
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    background: var(--accent-cyan);
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    backdrop-filter: blur(5px);
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    color: var(--white);
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-info i {
+    color: var(--primary-color);
+}
+
+.temperature {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.condition, .greeting {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.time-info {
+    text-align: right;
+}
+
+.time-info h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.header-nav {
+    max-width: 1400px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.nav-button:hover, .nav-button.active {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Dashboard Layout */
+.dashboard {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* News Section */
+.news-section {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-carousel {
+    display: flex;
+    height: 600px;
+}
+
+.featured-news {
+    position: relative;
+    flex: 1.5;
+    overflow: hidden;
+}
+
+.featured-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.featured-news:hover img {
+    transform: scale(1.05);
+}
+
+.news-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+}
+
+.featured-tag {
+    display: inline-block;
+    background: var(--white);
+    color: var(--text-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.news-overlay h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.news-list {
+    flex: 1;
+    background: var(--secondary-color);
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-item {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.news-item:hover {
+    transform: translateX(0.5rem);
+    box-shadow: var(--shadow);
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.news-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.news-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Weather Widget */
+.weather-section {
+    position: sticky;
+    top: 2rem;
+}
+
+.weather-widget {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.current-weather {
+    padding: 2rem;
+    background: linear-gradient(135deg, #6b8cce, #4b6cb7);
+    color: var(--white);
+}
+
+.weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temp-info h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    color: #ffd700;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1.5rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.forecast-day {
+    color: var(--text-primary);
+}
+
+.forecast-day p:first-child {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-day i {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin: 0.5rem 0;
+}
+
+/* Widgets Dashboard Styling */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--widget-bg);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+/* Enhanced Widget Styles */
+.widget {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* London Landmarks Widget */
+.landmarks-widget {
+    position: relative;
+    overflow: hidden;
+}
+
+.landmark-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.landmark-image {
+    width: 100%;
+    height: 180px;
+    position: relative;
+}
+
+.landmark-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.landmark-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--text-primary);
+}
+
+.landmark-status {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent-green);
+    color: var(--bg-darker);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+/* London Transport Enhancement */
+.tube-line {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.line-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.victoria-line { background: #009FE0; }
+.piccadilly-line { background: #0019A8; }
+.central-line { background: #EE3124; }
+.jubilee-line { background: #868F98; }
+
+/* Weather Enhancement */
+.weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.forecast-item {
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+/* Events Enhancement */
+.event-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent-purple);
+    color: var(--text-primary);
+    border-radius: 16px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* NHS Widget Enhancement */
+.nhs-urgent-care {
+    margin-top: 16px;
+    padding: 16px;
+    background: rgba(0, 94, 184, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #005EB8;
+}
+
+.wait-time-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.time-bar {
+    flex-grow: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.time-progress {
+    height: 100%;
+    background: var(--accent-cyan);
+    width: 65%;
+}
+
+/* River Thames Status */
+.thames-status {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(0, 157, 220, 0.1);
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+.tide-info {
+    flex-grow: 1;
+}
+
+.tide-level {
+    height: 100px;
+    width: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    margin: 0 16px;
+}
+
+.tide-current {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--accent-blue);
+    border-radius: 4px;
+    transition: height 0.3s ease;
+}
+
+.weather-detailed {
+    background: var(--gradient-blue);
+    color: var(--text-primary);
+}
+
+.current-conditions {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.temp-display {
+    margin-bottom: 20px;
+}
+
+.current-temp {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.feels-like {
+    display: block;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.hourly-forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.forecast-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.air-quality-detailed {
+    background: var(--gradient-purple);
+    color: var(--text-primary);
+}
+
+.aqi-main {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aqi-score {
+    margin-bottom: 15px;
+}
+
+.aqi-score .score {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.aqi-score .rating {
+    display: block;
+    font-size: 1.2em;
+}
+
+.aqi-gauge {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.pollutants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.pollutant-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.level-indicator.good { background: #4caf50; }
+.level-indicator.moderate { background: #ff9800; }
+.level-indicator.poor { background: #f44336; }
+
+.traffic-smart {
+    background: var(--bg-card);
+}
+
+.traffic-map {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.traffic-map img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.congestion-points .point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.point.severe { background: #f44336; }
+.point.moderate { background: #ff9800; }
+.point.light { background: #4caf50; }
+
+.traffic-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.transport-hub {
+    background: var(--gradient-orange);
+    color: var(--text-primary);
+}
+
+.transit-modes {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mode-tab {
+    flex: 1;
+    padding: 12px 16px;
+    text-align: center;
+    background: rgba(255, 132, 0, 0.5);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
+}
+
+.mode-tab.active {
+    background: rgb(244, 140, 4);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transit-updates {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.update-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.line-number {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-yellow);
+    color: var(--bg-darker);
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.route-info {
+    flex: 1;
+}
+
+.route-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.route-status {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.arrival-time {
+    font-weight: 700;
+    color: var(--accent-yellow);
+    font-size: 1.1rem;
+}
+
+.city-services {
+    background: var(--bg-card);
+}
+
+.service-category {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.status.operational {
+    background: #4caf50;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+.environmental {
+    background: var(--gradient-green);
+    color: var(--text-primary);
+}
+
+.eco-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+}
+
+.initiative-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.initiative-item .progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    margin-top: 8px;
+}
+
+.initiative-item .progress {
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+}
+
+.smart-parking {
+    background: var(--gradient-purple);
+    color: var(--text-primary);
+}
+
+.parking-overview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.total-spots .number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.availability-chart {
+    display: flex;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.chart-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.chart-segment.available { background: #4caf50; }
+.chart-segment.occupied { background: #ff9800; }
+
+.garage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.safety-analytics {
+    background: var(--bg-card);
+}
+
+.alert-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-indicator.normal { background: #4caf50; }
+.status-indicator.warning { background: #ff9800; }
+.status-indicator.critical { background: #f44336; }
+
+.incident-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.incident-stat {
+    text-align: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.incident-stat .number {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.cultural-events {
+    background: var(--gradient-blue);
+    color: var(--text-primary);
+}
+
+.featured-event {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.event-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+
+.event-time {
+    text-align: center;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    min-width: 80px;
+}
+
+.ticket-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+.ticket-status.available { background: #4caf50; color: white; }
+.ticket-status.limited { background: #ff9800; color: white; }
+
+.healthcare {
+    background: var(--gradient-orange);
+    color: var(--text-primary);
+}
+
+.hospital-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.wait-time {
+    text-align: center;
+}
+
+.wait-time .time {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.capacity-indicator {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.capacity-indicator.low { background: #4caf50; }
+.capacity-indicator.moderate { background: #ff9800; }
+.capacity-indicator.high { background: #f44336; }
+
+.health-alerts .alert-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Responsive Widgets */
+@media (max-width: 992px) {
+    .widget {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+    
+    .widget {
+        flex: 1 1 100%;
+    }
+}
+
+/* Enhanced Footer Styling */
+.city-dashboard-footer {
+    background: var(--bg-darker);
+    padding: 64px 0 32px;
+    margin-top: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    gap: 64px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+}
+
+.link-group h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.link-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-group a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+}
+
+.link-group a:hover {
+    color: var(--accent-yellow);
+    transform: translateX(8px);
+}
+
+.footer-social h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.social-icons a:hover {
+    background: var(--accent-yellow);
+    color: var(--bg-darker);
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 48px auto 0;
+    padding: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .footer-logo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 0 1rem;
+    }
+    
+    .forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .news-item {
+        flex-direction: column;
+    }
+    
+    .news-item img {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+/* Emergency Services Widget */
+.emergency {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+}
+
+.emergency .service-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.response-times {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Energy Widget */
+.energy {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.usage-meter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.meter-reading {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.energy-details {
+    display: grid;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Parking Widget */
+.parking .garage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.availability {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.availability.high { background: #4caf50; }
+.availability.medium { background: #ff9800; }
+.availability.low { background: #f44336; }
+
+/* Events Widget */
+.events-list {
+    display: grid;
+    gap: 15px;
+}
+
+.event-item {
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.event-date {
+    text-align: center;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    min-width: 60px;
+}
+
+.event-date .day {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+}
+
+/* Water Quality Widget */
+.water-quality {
+    background: linear-gradient(135deg, #48c6ef, #6f86d6);
+    color: white;
+}
+
+.quality-meter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quality-meter .rating {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.parameters {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.parameter-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Waste Management Widget */
+.waste .rate-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.collection-schedule {
+    display: grid;
+    gap: 10px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Public Safety Widget */
+.safety .alert-level {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.level {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.level.normal {
+    background: #4caf50;
+    color: white;
+}
+
+.report-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+/* Education Widget */
+.education .status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.badge.open {
+    background: #4caf50;
+    color: white;
+}
+
+.programs {
+    margin-top: 20px;
+}
+
+/* Construction Widget */
+.construction .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Community Widget */
+.community .meeting-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.meeting-date {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.volunteer {
+    margin-top: 20px;
+}
+
+.volunteer p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.weather-detailed {
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+}
+
+.weather-detailed h3 {
+    color: white;
+}
+
+.weather-detailed h3 i {
+    color: #ffd700;
+}
+
+.temp-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.current-temp {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.feels-like {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.aqi-main {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aqi-score {
+    font-size: 36px;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.aqi-gauge {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 4px;
+}
+
+.pollutants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.pollutant-item {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.traffic-map {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.traffic-map img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.traffic-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.transit-modes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mode-tab {
+    padding: 8px 16px;
+    background: #f0f2f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mode-tab.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: transparent;
+}
+
+.update-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.line-number {
+    background: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    min-width: 32px;
+    text-align: center;
+}
+
+.eco-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.parking-overview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.availability-chart {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.chart-segment {
+    height: 100%;
+}
+
+.chart-segment.available {
+    background: #4CAF50;
+}
+
+.chart-segment.occupied {
+    background: #f44336;
+}
+
+.featured-event {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.featured-event img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: white;
+}
+
+.hospital-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.capacity-indicator {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.capacity-indicator.moderate {
+    background: #F59E0B;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .weather-details,
+    .pollutants,
+    .traffic-stats,
+    .eco-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .current-temp {
+        font-size: 42px;
+    }
+    
+    .widget h3 {
+        font-size: 18px;
+    }
+}
+
+/* Widget Image Styles */
+.widget-image {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.widget-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.widget-image:hover img {
+    transform: scale(1.05);
+}
+
+.widget-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: var(--text-primary);
+}
+
+/* Enhanced Weather Widget */
+.weather-detailed {
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.weather-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weather-content {
+    position: relative;
+    z-index: 1;
+}
+
+.current-temp {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Air Quality Widget Enhancement */
+.aqi-visual {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.aqi-level {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background: linear-gradient(90deg, #4ade80, #facc15, #f87171);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Transit Hub Enhancements */
+.transit-mode-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.route-map-preview {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.route-map-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cultural Events Enhancement */
+.event-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--text-primary);
+}
+
+.event-date {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--accent-yellow);
+    color: var(--bg-darker);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+/* Healthcare Widget Enhancement */
+.hospital-card {
+    position: relative;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(5px);
+}
+
+.hospital-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 16px;
+}
+
+.hospital-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Environmental Widget Enhancement */
+.eco-stat-card {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.eco-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-cyan);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: var(--bg-darker);
+}
+
+/* Smart Parking Enhancement */
+.parking-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-available {
+    background: var(--accent-cyan);
+}
+
+.status-full {
+    background: var(--primary-red);
+}
+
+.status-limited {
+    background: var(--accent-yellow);
+}
